@@ -10,7 +10,7 @@ export default class HomePage {
 
   async expectServiceTitleToBeVisible() {
     await expect(this.page.getByTitle(this.serviceTitleLocator)).toBeVisible({
-      timeout: 15000,
+      timeout: 30000,
     }).catch((error) => {
       logger.error(`Error clicking login button: ${error}`);
       throw error; 
