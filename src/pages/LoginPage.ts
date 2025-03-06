@@ -23,7 +23,7 @@ export default class LoginPage {
 
   async fillPassword(password: string) {
     await this.page.locator(this.passwordInputSelector).fill(password);  
-    logger.info("Filled password" + password);
+    logger.info("Filled password as " + password);
   }
  
   async clickLoginButton() {
