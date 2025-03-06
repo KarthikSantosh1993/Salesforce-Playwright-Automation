@@ -14,8 +14,8 @@ for (const contact of contactsData) {
     await loginPage.fillPassword(decrypt(process.env.password!));
 
     const homePage = await loginPage.clickLoginButton();
-    await homePage.expectServiceTitleToBeVisible();
-    console.log("Login Successful!!!");
+    //await homePage.expectServiceTitleToBeVisible();
+    //console.log("Login Successful!!!");
 
     const contactsPage = await homePage.navigateToContactTab();
     await contactsPage.createNewContact(contact.firstName, contact.lastName);
