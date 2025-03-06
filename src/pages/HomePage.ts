@@ -9,6 +9,7 @@ export default class HomePage {
   constructor(private page: Page) {}
 
   async expectServiceTitleToBeVisible() {
+    logger.info("title of landing page" +this.page.getByTitle(this.serviceTitleLocator).textContent())
     await expect(this.page.getByTitle(this.serviceTitleLocator)).toBeVisible({
       timeout: 30000,
     }).catch((error) => {
