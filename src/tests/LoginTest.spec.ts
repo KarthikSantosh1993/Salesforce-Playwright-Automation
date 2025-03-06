@@ -7,7 +7,7 @@ test("salesforce login test", async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.navigateToLoginPage();
   await loginPage.fillUsername(process.env.userid!);
-  await loginPage.fillPassword(decrypt(process.env.password!));
+  await loginPage.fillPassword(process.env.password!);
 
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectServiceTitleToBeVisible();
