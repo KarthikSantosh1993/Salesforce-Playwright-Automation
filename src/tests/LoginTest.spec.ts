@@ -3,7 +3,7 @@ import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
 import { decrypt } from "../utils/CryptojsUtil";
 
-test.only("salesforce login test", async ({ page }) => {
+test("salesforce login test", async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.navigateToLoginPage();
   await loginPage.fillUsername(process.env.userid!);
